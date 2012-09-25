@@ -1,33 +1,97 @@
 package fr.iutvalence.java.projet2;
 /** un mail */
 public class Message {
-	public String message_objet;
-	public String message_expediteur;
-	public String message_corps;
+	public String objet;
+	public String expediteur;
+	public String destinataire;
+	public String corps;
 	
 	public Message()
 	{
-		this.message_objet = "";
-		this.message_expediteur = "";
-		this.message_corps = "";	
+		this.objet = "";
+		this.expediteur = "";
+		this.destinataire = "";
+		this.corps = "";	
 	}
 	
+
+
 	/**
-	 * Fonction permettant la rédaction d'un nouveau mail
-	 * (l'envoi sera géré par la classe EmetteurDeMessages)
+	 * @param objet
+	 * @param expediteur
+	 * @param destinataire
+	 * @param corps
 	 */
-	public void redigerNouveauMessage()
-	{
-		// A compléter
+	public Message(String objet, String expediteur, String destinataire,
+			String corps) {
+		super();
+		this.objet = objet;
+		this.expediteur = expediteur;
+		this.destinataire = destinataire;
+		this.corps = corps;
 	}
+
+
+
+	public String getObjet() {
+		return objet;
+	}
+
+
+
+	public void setObjet(String objet) {
+		this.objet = objet;
+	}
+
+
+
+	public String getExpediteur() {
+		return expediteur;
+	}
+
+
+
+	public void setExpediteur(String expediteur) {
+		this.expediteur = expediteur;
+	}
+
+
+
+	public String getDestinataire() {
+		return destinataire;
+	}
+
+
+
+	public void setDestinataire(String destinataire) {
+		this.destinataire = destinataire;
+	}
+
+
+
+	public String getCorps() {
+		return corps;
+	}
+
+
+
+	public void setCorps(String corps) {
+		this.corps = corps;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Message [objet=" + objet + ", expediteur=" + expediteur
+				+ ", destinataire=" + destinataire + ", corps=" + corps + "]";
+	}
+
+
+
 	
-	/**
-	 * Fonction permettant la suppression d'un mail de la boite de réception
-	 * Consiste à réaliser l'action de déplacer le mail dans la BoiteAuxLettres corbeille.
-	 */
-	public void supprimerMessage()
-	{
-		// A compléter 
-	}
+	
+	
+
 	
 }
