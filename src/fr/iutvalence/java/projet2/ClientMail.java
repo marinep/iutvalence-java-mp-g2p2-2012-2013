@@ -1,5 +1,9 @@
 package fr.iutvalence.java.projet2;
-/** application pour gérer une messagerie */
+
+// FIXME modifier le commentaire, cette classe n'est pas une application
+/** 
+ * application pour gérer une messagerie 
+ * */
 public class ClientMail {
 	
 	/**
@@ -7,14 +11,18 @@ public class ClientMail {
 	 */
 	private BoiteAuxLettres[] boitesAuxLettres;
 	
+	//FIXME clarifier le commentaire
 	/**
 	 * Émission des messages
 	 */
 	private EmetteurDeMessages emetteurDeMessages ;
-	
+
+	//FIXME clarifier le commentaire
 	/**
 	 * Réception des messages
 	 */
 	private RecepteurDeMessages recepteurDeMessages ;
 
+	
+	// FIXME constructeurs, méthodes ?
 }
