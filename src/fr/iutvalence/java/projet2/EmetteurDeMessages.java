@@ -1,15 +1,16 @@
 package fr.iutvalence.java.projet2;
 
-// FIXME clarifier le commentaire, en précisant notamment que pour le moment l'implémentation est naive
 /**
- * Émission des messages :
- * Va regrouper les fonctions qui permettent
- * la connexion au serveur et l'envoi de messages
+ * Service d'émission de messages
+ * implémentation naive - affiche messages sur la console
  */
 public class EmetteurDeMessages 
 {	
 	
-	// FIXME écrire un commentaire
+	/**
+	 * Cette fonction est du flan
+	 * Envoi de message 
+	 */
 	public void envoiMessage(Message m)
 	{
 		System.out.println("Envoi du message : "+m);

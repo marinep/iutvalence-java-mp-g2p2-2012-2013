@@ -1,20 +1,25 @@
 package fr.iutvalence.java.projet2;
 
-//FIXME clarifier le commentaire
 /** 
- * dossier contenant un tableau de messages 
+ * dossier contenant la liste des objets des messages présents dans le dossier
  * */
 public class DossierMessages {
 	
-	// FIXME réfléchir à la visibilité des attributs
-	// FIXME écrire un commentaire
-	public String nom_dossier;
-	
-	// FIXME réfléchir à la visibilité des attributs
-	// FIXME initialiser les attributs dans le(s) constructeur(s)
-	// FIXME écrire un commentaire
-	public Message[] liste_messages = new Message[100];
+
+	/**
+	 * Nom du dossier contenant des messages
+	 */
+	private String nom_dossier;
+
+	/**
+	 * Affichage de la liste des mails présents dans le dossier
+	 */
+	private Message[] liste_messages;
 	
 	// FIXME constructeurs, méthodes ?
+	public DossierMessages()
+	{
+		this.liste_messages = new Message[100];
+	}
 	
 }

@@ -1,11 +1,13 @@
 package fr.iutvalence.java.projet2;
 
-//FIXME écrire un commentaire
+/**
+ * Fonction d'émission de message (flan)
+ * Envoie un mail à la console
+ */
 public class TestEmetteurDeMessage {
 
-	// FIXME clarifier le commentaire
 	/**
-	 * @param args
+	 * Fonction principale qui retourne tous les tests dans la console
 	 */
 	public static void main(String[] args) 
 	{

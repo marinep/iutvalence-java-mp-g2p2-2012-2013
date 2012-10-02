@@ -1,20 +1,26 @@
 package fr.iutvalence.java.projet2;
 
-// FIXME clarifier le commentaire
 /**
- *  Contient des dossiers "adresse mail" 
- * (truc@gmail.com... )
+ *  Dans le cas ou l'utilisateur configure plusieurs adresses mail différentes sur son client mail, 
+ *  il contient tous les dossiers "adresse mail" et va permettre 
+ *  de trier les mails de la boite de réception et les placer dans les bons dossiers 
  */
 public class ConteneurAdresses 
 {
-	// FIXME écrire un commentaire
-	// FIXME réfléchir à la visibilité des attributs
-	public String nom_conteneur; // exemple : boite de réception, messages envoyés...
 
-	// FIXME écrire un commentaire
-	// FIXME initialiser les attributs dans le(s) constructeur(s)
-	// FIXME réfléchir à la visibilité des attributs
-	public DossierAdresse[] liste_adresses_mail = new DossierAdresse[20];
+	/**
+	 * Définit le nom du conteneur de messages ou de dossiers de messages
+	 */
+	private String nom_conteneur; // exemple : boite de réception, messages envoyés...
+
+	/**
+	 * Définit la liste des adresses mail configurées par l'utilisateur
+	 */
+	private DossierAdresse[] liste_adresses_mail; 
 	
-	// FIXME constructeurs, méthodes ?
+	// FIXME méthodes ?
+	public ConteneurAdresses(String nom){
+		this.nom_conteneur = nom;
+		this.liste_adresses_mail = new DossierAdresse[20];	
+	}
 }

@@ -1,7 +1,5 @@
 package fr.iutvalence.java.projet2;
 
-
-// FIXME clarifier le commentaire
 /**
  * Réception des messages : 
  * Connexion au serveur + récupération des messages
@@ -9,6 +7,12 @@ package fr.iutvalence.java.projet2;
  */
 public class RecepteurDeMessages {
 	
-	// FIXME compléter, éventuellement avec une première implémentation naive
-
+	public void RecepteurDeMessage(Message m)
+	{
+		System.out.println(" du message : "+m);
+	}
+	
+	/*
+	 * 
+	 */
 }

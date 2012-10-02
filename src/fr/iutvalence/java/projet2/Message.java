@@ -1,37 +1,30 @@
 package fr.iutvalence.java.projet2;
 
-// FIXME clarifier le commentaire
-/** un mail */
+/** un mail composé d'un objet, d'un expéditeur, d'un destinataire et d'un corps */
 public class Message {
 	
-	// FIXME écrire un commentaire 
-	// FIXME réfléchir à la visibilité des attributs
-	public String objet;
-	
-	// FIXME écrire un commentaire 
-	// FIXME réfléchir à la visibilité des attributs
-	public String expediteur;
-
-	// FIXME écrire un commentaire 
-	// FIXME réfléchir à la visibilité des attributs
-	public String destinataire;
-	
-	// FIXME écrire un commentaire 
-	// FIXME réfléchir à la visibilité des attributs
-	public String corps;
-	
-	// FIXME écrire un commentaire 
-	public Message()
-	{
-		this.objet = "";
-		this.expediteur = "";
-		this.destinataire = "";
-		this.corps = "";	
-	}
-	
-
-	// FIXME clarifier le commentaire
 	/**
+	 * Objet d'un message spécifié par l'expéditeur du mail
+	*/
+	private final String objet;
+	
+	/**
+	 * adresse mail de l'expéditeur définie lors de l'envoi du mail par l'expéditeur
+	*/
+	private final String expediteur;
+
+	/**
+	 * Destinataire du message (utilisateur "courant" 
+	*/ 
+	private final String destinataire;
+	
+	/**
+	 * Corps du mail défini par l'expéditeur du mail contenant tout le texte
+	*/
+	private final String corps;	
+
+	/**
+	 * Définition du constructeur message (mail) envoyé par un expéditeur
 	 * @param objet
 	 * @param expediteur
 	 * @param destinataire
@@ -39,7 +32,7 @@ public class Message {
 	 */
 	public Message(String objet, String expediteur, String destinataire,
 			String corps) {
-		super();
+
 		this.objet = objet;
 		this.expediteur = expediteur;
 		this.destinataire = destinataire;
@@ -47,54 +40,33 @@ public class Message {
 	}
 
 
-	// FIXME écrire un commentaire
+	/**
+	 * Accesseur en lecture de l'objet d'un mail
+	 */
 	public String getObjet() {
 		return objet;
 	}
 
-
-	// FIXME écrire un commentaire
-	public void setObjet(String objet) {
-		this.objet = objet;
-	}
-
-
-	// FIXME écrire un commentaire
+	/**
+	 * Accesseur en lecture de l'expéditeur d'un mail
+	 */
 	public String getExpediteur() {
 		return expediteur;
 	}
 
-
-	// FIXME écrire un commentaire
-	public void setExpediteur(String expediteur) {
-		this.expediteur = expediteur;
-	}
-
-
-	// FIXME écrire un commentaire
+	/**
+	 * Accesseur en lecture du destinataire d'un mail
+	 */
 	public String getDestinataire() {
 		return destinataire;
 	}
 
-
-	// FIXME écrire un commentaire
-	public void setDestinataire(String destinataire) {
-		this.destinataire = destinataire;
-	}
-
-
-	// FIXME écrire un commentaire
+	/**
+	 * Accesseur en lecture du corps d'un mail
+	 */
 	public String getCorps() {
 		return corps;
 	}
-
-
-	// FIXME écrire un commentaire
-	public void setCorps(String corps) {
-		this.corps = corps;
-	}
-
-
 
 	@Override
 	public String toString() {
