@@ -1,5 +1,7 @@
+// FIXME trouver un nom plus évocateur pour le package (fr.iutvalence.java.projets.clientmail) ?
 package fr.iutvalence.java.projet2;
 
+// FIXME corrigrer le commentaire (faire des phrases)
 /** 
  * contient des supers dossiers où seront listés tous les mails
  * reçus, envoyés et supprimés (boite de réception, messages envoyés, corbeille...) 
@@ -17,16 +19,25 @@ public class BoiteAuxLettres {
 	*/
 	private Message[] eltsEnvoyes;
 	
+	// FIXME il manque un attribut pour savoir combien il y a d'éléments dans le tableau
+	
 	/**
 	 * contient tous les mails supprimés par l'utilisateur
 	 */
 	private Message[] corbeille;
+
+	// FIXME il manque un attribut pour savoir combien il y a d'éléments dans le tableau
 	
 	// FIXME constructeurs, méthodes ?
 	
 	public BoiteAuxLettres()
 	{
+		// FIXME définir la capacité par défaut du tableau sous forme d'une constante
 		this.eltsEnvoyes = new Message[100];
 		this.corbeille = new Message[100];
+		
+		// FIXME tous les attributs doivent être initialisés
 	}
+	
+	// FIXME méthodes ?
 }

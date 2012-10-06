@@ -8,7 +8,7 @@ public class EmetteurDeMessages
 {	
 	
 	/**
-	 * Cette fonction est du flan
+	 * Cette fonction est du flan 
 	 * Envoi de message 
 	 */
 	public void envoiMessage(Message m)

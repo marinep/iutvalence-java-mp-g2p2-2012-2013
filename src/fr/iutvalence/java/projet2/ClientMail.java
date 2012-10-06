@@ -10,6 +10,8 @@ public class ClientMail {
 	 */
 	private BoiteAuxLettres[] boitesAuxLettres;
 	
+	// FIXME il manque un attribut pour savoir combien il y a d'éléments dans le tableau
+	
 	/**
 	 * Émission des messages contenant objet, expéditeur, etc... via un serveur distant
 	 */

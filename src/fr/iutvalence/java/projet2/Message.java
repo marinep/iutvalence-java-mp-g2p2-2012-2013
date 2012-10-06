@@ -1,5 +1,6 @@
 package fr.iutvalence.java.projet2;
 
+// FIXME corriger le commentaire (faire une phrase)
 /** un mail composé d'un objet, d'un expéditeur, d'un destinataire et d'un corps */
 public class Message {
 	
@@ -14,7 +15,7 @@ public class Message {
 	private final String expediteur;
 
 	/**
-	 * Destinataire du message (utilisateur "courant" 
+	 * Destinataire du message (utilisateur "courant") 
 	*/ 
 	private final String destinataire;
 	

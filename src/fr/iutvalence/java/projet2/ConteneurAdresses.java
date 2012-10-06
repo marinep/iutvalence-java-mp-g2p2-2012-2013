@@ -11,16 +11,22 @@ public class ConteneurAdresses
 	/**
 	 * Définit le nom du conteneur de messages ou de dossiers de messages
 	 */
+	// FIXME respecter les conventions d'écriture
 	private String nom_conteneur; // exemple : boite de réception, messages envoyés...
 
 	/**
 	 * Définit la liste des adresses mail configurées par l'utilisateur
 	 */
+	// FIXME respecter les conventions d'écriture
 	private DossierAdresse[] liste_adresses_mail; 
 	
-	// FIXME méthodes ?
+	// FIXME il manque un attribut pour savoir combien il y a d'éléments dans le tableau
+
 	public ConteneurAdresses(String nom){
 		this.nom_conteneur = nom;
-		this.liste_adresses_mail = new DossierAdresse[20];	
+		// FIXME définir la capacité par défaut du tableau sous forme de constante
+		this.liste_adresses_mail = new DossierAdresse[20];		
 	}
+	
+	// FIXME méthodes ?
 }

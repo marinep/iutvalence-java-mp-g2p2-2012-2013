@@ -1,3 +1,4 @@
+// FIXME déplacer cette application de test dans un paquetage différent de celui des autres classes
 package fr.iutvalence.java.projet2;
 
 /**
