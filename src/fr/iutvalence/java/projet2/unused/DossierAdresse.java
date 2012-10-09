@@ -1,4 +1,5 @@
-package fr.iutvalence.java.projet2;
+package fr.iutvalence.java.projet2.unused;
+
 
 
 // FIXME corriger le commentaire (écrire une phrase)

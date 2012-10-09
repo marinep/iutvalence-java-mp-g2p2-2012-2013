@@ -1,10 +1,12 @@
 // FIXME trouver un nom plus évocateur pour le package (fr.iutvalence.java.projets.clientmail) ?
 package fr.iutvalence.java.projet2;
 
-// FIXME corrigrer le commentaire (faire des phrases)
+// FIXME corriger le commentaire (faire des phrases)
 /** 
- * contient des supers dossiers où seront listés tous les mails
- * reçus, envoyés et supprimés (boite de réception, messages envoyés, corbeille...) 
+ * Cette classe contient les dossiers principaux du client mail : 
+ * mails reçus, envoyés et supprimés (boite de réception, messages envoyés, corbeille) 
+ * Cette classe permettra de naviguer entre les différents comptes pour afficher ensuite 
+ * tous les mails ou un mail particulier. 
  * */
 public class BoiteAuxLettres {
 	
