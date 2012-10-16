@@ -1,5 +1,7 @@
 // FIXME trouver un nom plus évocateur pour le package (fr.iutvalence.java.projets.clientmail) ?
-package fr.iutvalence.java.projet2;
+package fr.iutvalence.java.projet2.unused;
+
+import fr.iutvalence.java.projet2.Message;
 
 // FIXME corriger le commentaire (faire des phrases)
 /** 

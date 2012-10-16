@@ -11,7 +11,7 @@ public class DossierMessages {
 	/**
 	 * Nom du dossier contenant des messages
 	 */
-	// FIXME(FIXED) respecter les conventions d'écriture
+	// FIXME (FIXED) respecter les conventions d'écriture
 	private String nomDossier;
 
 	/**

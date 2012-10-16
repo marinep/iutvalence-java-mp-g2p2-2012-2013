@@ -8,32 +8,73 @@ import fr.iutvalence.java.projet2.unused.DossierAdresse;
 public class CompteMail 
 {
 	/**
-	 * Définit le nom du conteneur de messages ou de dossiers de messages
+	 * Définit le nom symbolique du compte mail
 	 */
-	private String nomCompte; // exemple : boite de réception, messages envoyés...
-
+	private String nomCompte;
 	
-	// FIXME détailler le commentaire, de quelles adresses mails s'agit-il ? (c'est flou)
 	/**
-	 * Définit la liste des adresses mail configurées par l'utilisateur
+	 * Correspond à l'adresse mail de l'utilisateur
 	 */
-	private DossierAdresse[] listeAdressesMail;
+	private String adresseCompte; 
 	
-	
-	// FIXME déplacer la définition de la constante avant celles des attributs
 	/**
-	 * nombre maximal d'adresses dans le conteneur
+	 * Correspond à l'emetteur de messages associé au compte mail
+	 * Émission des messages contenant objet, expéditeur, etc... via un serveur distant
 	 */
-	private static final int NB_MAX_ADRESSES = 20;
+	private EmetteurDeMessages emetteurCompte;
 	
-	// FIXME (WRONGLY FIXED !) il manque un attribut pour savoir combien il y a d'éléments dans le tableau (une constante ne suffit pas)
-
+	/**
+	 * Correspond au récepteur de messages associé au compte mail
+	 * Réception des messages arrivant directement dans le dossier boite de réception. 
+	 * La réception se fait par un serveur distant
+	 */
+	private RecepteurDeMessages recepteurCompte;
 	
-	// FIXME écrire un commentaire
-	public CompteMail(String nom){
+	/**
+	 * Ensemble des dossiers de messages pour ce compte mail
+	 */
+	private Dossier[] dossiers;
+	
+	/**
+	 * entier permettant de determiner le nombre 
+	 * de dossiers pour ce compte mail
+	 */
+	private int nbDossiers;
+	
+	/**
+	 * nombre maximum de dossiers pouvant être créés pour un compte mail
+	 */
+	public static final int CAPA_MAX_DOSSIERS = 30;
+	
+	
+	
+	// FIXME (FIXED) Constructeur de la classe CompteMail
+	/**
+	 * 
+	 * @param nom
+	 */
+	public CompteMail(String nom)
+	{
 		this.nomCompte = nom;
-		this.listeAdressesMail = new DossierAdresse[NB_MAX_ADRESSES];		
+		this.adresseCompte = 
+		this.emetteurCompte =
+		this.recepteurCompte = 
 	}
 	
-	// FIXME méthodes ?
+	/**
+	 * Permet de supprimer un dossier de messaegs
+	 * @param d
+	 * @throws NomDossierInvalideException
+	 */
+	public void supprimerDossier(Dossier d) throws NomDossierInvalideException{
+		
+		int compteur = 0;
+		while ((compteur < nbDossiers) && (Dossier[compteur].nom != d.nom)) 
+		{
+			compteur++;
+		}
+		
+		
+		
+	}
 }

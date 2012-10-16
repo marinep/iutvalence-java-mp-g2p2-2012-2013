@@ -19,9 +19,9 @@ public class Message {
 	*/
 	private final String expediteur;
 
-	// FIXME adresse mail également (ambigü) ?
+	// FIXME (FIXED) adresse mail également (ambigü) ?
 	/**
-	 * Destinataire du message (utilisateur "courant") 
+	 * Adresse mail du destinataire du message
 	*/ 
 	private final String destinataire;
 	
@@ -30,9 +30,10 @@ public class Message {
 	*/
 	private final String corps;	
 
-	// FIXME détailler le commentaire (la première phrase doit indiquer quel est "l'état" du message créé)
+	// FIXME (FIXED) détailler le commentaire (la première phrase doit indiquer quel est "l'état" du message créé)
 	/**
-	 * Définition du constructeur message (mail) envoyé par un expéditeur
+	 * Création d'un nouveau message avec l'objet, l'expéditeur, le destinataire
+	 * et le corps du message passés en paramètre
 	 * @param objet l'objet du mail
 	 * @param expediteur l'expéditeur du mail
 	 * @param destinataire l'adrese mail de destination 
@@ -48,11 +49,11 @@ public class Message {
 	}
 
 
-	// FIXME essayer d'utiliser le même terme (message) plutôt que 2 (message/mail)
+	// FIXME (FIXED) essayer d'utiliser le même terme (message) plutôt que 2 (message/mail)
 
 	/**
-	 * Obtenir l'objet du mail
-	 * @return l'objet du mail
+	 * Obtenir l'objet du message
+	 * @return l'objet du message
 	 */
 	public String getObjet() {
 		return objet;
