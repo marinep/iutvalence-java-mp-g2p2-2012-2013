@@ -2,7 +2,7 @@ package fr.iutvalence.java.projet2;
 
 /**
  * Service d'émission de messages
- * implémentation naive - affiche messages sur la console
+ * implémentation naive - affiche les messages sur la console
  */
 public class EmetteurDeMessages 
 {	

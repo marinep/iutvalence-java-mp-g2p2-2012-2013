@@ -1,4 +1,4 @@
-// FIXME (FIXED) déplacer cette application de test dans un paquetage différent de celui des autres classes
+
 package fr.iutvalence.java.projet2.tests;
 
 import fr.iutvalence.java.projet2.EmetteurDeMessages;
@@ -10,6 +10,7 @@ import fr.iutvalence.java.projet2.Message;
  */
 public class TestEmetteurDeMessage {
 
+	// FIXME le commentaire n'est pas génial (dire ce que l'on veu tester)
 	/**
 	 * Fonction principale qui retourne tous les tests dans la console
 	 */

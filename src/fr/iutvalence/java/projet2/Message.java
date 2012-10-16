@@ -1,34 +1,36 @@
 package fr.iutvalence.java.projet2;
 
-// FIXME (FIXED) corriger le commentaire (faire une phrase)
-/** la classe Message est utilisée pour représenter
- * un mail, composé d'un objet, d'un expéditeur, d'un destinataire et d'un corps */
-/**
+/** 
+ * la classe Message est utilisée pour représenter
+ * un mail, composé d'un objet, d'un expéditeur, d'un destinataire et d'un corps
+ * 
  * @author pougem
  *
  */
 public class Message {
-	
+
 	/**
-	 * Objet d'un message spécifié par l'expéditeur du mail
+	 * Objet du message
 	*/
 	private final String objet;
 	
 	/**
-	 * adresse mail de l'expéditeur définie lors de l'envoi du mail par l'expéditeur
+	 * Adresse mail de l'expéditeur 
 	*/
 	private final String expediteur;
 
+	// FIXME adresse mail également (ambigü) ?
 	/**
 	 * Destinataire du message (utilisateur "courant") 
 	*/ 
 	private final String destinataire;
 	
 	/**
-	 * Corps du mail défini par l'expéditeur du mail contenant tout le texte
+	 * Corps du mail (contenu)
 	*/
 	private final String corps;	
 
+	// FIXME détailler le commentaire (la première phrase doit indiquer quel est "l'état" du message créé)
 	/**
 	 * Définition du constructeur message (mail) envoyé par un expéditeur
 	 * @param objet l'objet du mail
@@ -46,6 +48,7 @@ public class Message {
 	}
 
 
+	// FIXME essayer d'utiliser le même terme (message) plutôt que 2 (message/mail)
 
 	/**
 	 * Obtenir l'objet du mail
