@@ -46,9 +46,6 @@ public class CompteMail
 	 */
 	public static final int CAPA_MAX_DOSSIERS = 30;
 	
-	
-	
-	// FIXME (FIXED) Constructeur de la classe CompteMail
 	/**
 	 * 
 	 * @param nom

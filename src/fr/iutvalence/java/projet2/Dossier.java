@@ -30,6 +30,7 @@ public class Dossier {
 	 */
 	private int nbMessages;
 	
+	// FIXME compléter le commentaire
 	/**
 	 * Création d'un nouveau Dossier vide, avec en paramètre son nom
 	 * @param nom
@@ -41,6 +42,7 @@ public class Dossier {
 		
 	}
 	
+	// FIXME compléter le commentaire
 	/**
 	 * Fonction permettant d'ajouter un message dans le dossier.
 	 * @param m
@@ -56,13 +58,15 @@ public class Dossier {
 		
 	}
 	
-	
+	// FIXME compléter le commentaire
 	/**
 	 * Fonction permettant de supprimer un message dans le dossier.
 	 * @param m
 	 */
 	public void supprimerMessage(Message m){		
 			
+		// FIXME à compléter 
+		// FIXME pour que cela marche, il faudrait redéfinir equals dans Message
 		nbMessages--;
 		
 	}

@@ -10,7 +10,6 @@ import fr.iutvalence.java.projet2.Message;
  */
 public class TestEmetteurDeMessage {
 
-	// FIXME (FIXED) le commentaire n'est pas génial (dire ce que l'on veu tester)
 	/**
 	 * Fonction de test qui affiche dans la console un message.
 	 * Cela permet de tester si le message a été créé correctement.

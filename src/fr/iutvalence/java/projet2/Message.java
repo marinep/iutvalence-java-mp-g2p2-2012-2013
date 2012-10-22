@@ -19,7 +19,6 @@ public class Message {
 	*/
 	private final String expediteur;
 
-	// FIXME (FIXED) adresse mail également (ambigü) ?
 	/**
 	 * Adresse mail du destinataire du message
 	*/ 
@@ -30,7 +29,6 @@ public class Message {
 	*/
 	private final String corps;	
 
-	// FIXME (FIXED) détailler le commentaire (la première phrase doit indiquer quel est "l'état" du message créé)
 	/**
 	 * Création d'un nouveau message avec l'objet, l'expéditeur, le destinataire
 	 * et le corps du message passés en paramètre
@@ -47,9 +45,6 @@ public class Message {
 		this.destinataire = destinataire;
 		this.corps = corps;
 	}
-
-
-	// FIXME (FIXED) essayer d'utiliser le même terme (message) plutôt que 2 (message/mail)
 
 	/**
 	 * Obtenir l'objet du message
@@ -91,5 +86,8 @@ public class Message {
 		return "Message [objet=" + objet + ", expediteur=" + expediteur
 				+ ", destinataire=" + destinataire + ", corps=" + corps + "]";
 	}
+	
+	
+	//FIXME redéfinir equals et hashCode
 	
 }
