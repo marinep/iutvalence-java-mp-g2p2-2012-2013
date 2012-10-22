@@ -46,6 +46,7 @@ public class CompteMail
 	 */
 	public static final int CAPA_MAX_DOSSIERS = 30;
 	
+	// FIXME compléter le commentaire
 	/**
 	 * 
 	 * @param nom
