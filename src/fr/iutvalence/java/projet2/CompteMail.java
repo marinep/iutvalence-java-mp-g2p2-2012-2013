@@ -1,9 +1,9 @@
 package fr.iutvalence.java.projet2;
 
-import fr.iutvalence.java.projet2.unused.DossierAdresse;
 
 /**
- *  Un compte mail contient tous les dossiers liés à une "adresse mail"
+ *  Cette classe représente un compte mail : elle est utilisée pour
+ *  gérer tous les dossiers liés à une "adresse mail"
  */
 public class CompteMail 
 {
@@ -46,28 +46,46 @@ public class CompteMail
 	 */
 	public static final int CAPA_MAX_DOSSIERS = 30;
 	
+	/**
+	 * @param nomCompte
+	 * @param adresseCompte
+	 * @param emetteurCompte
+	 * @param recepteurCompte
+	 */
+	public CompteMail(String nomCompte, String adresseCompte,
+			EmetteurDeMessages emetteurCompte,
+			RecepteurDeMessages recepteurCompte) {
+		super();
+		this.nomCompte = nomCompte;
+		this.adresseCompte = adresseCompte;
+		this.emetteurCompte = emetteurCompte;
+		this.recepteurCompte = recepteurCompte;
+		
+		// ..
+	}
 	// FIXME compléter le commentaire
 	/**
 	 * 
 	 * @param nom
 	 */
-	public CompteMail(String nom)
-	{
-		this.nomCompte = nom;
-		this.adresseCompte = 
-		this.emetteurCompte =
-		this.recepteurCompte = 
-	}
+	
+	//public static final EmetteurDeMessages EmmeteurCompte= "e";
+	//public static final EmetteurDeMessages RecepteurCompte = "r";
+	
+	
 	
 	/**
-	 * Permet de supprimer un dossier de messaegs
-	 * @param d
-	 * @throws NomDossierInvalideException
+	 * Permet de supprimer un dossier de messages
+	 * @param d Le dossier à supprimer
+	 * @throws NomDossierInvalideException Exception renvoyée si le nom du dossier n'existe pas
 	 */
 	public void supprimerDossier(Dossier d) throws NomDossierInvalideException{
 		
 		int compteur = 0;
-		while ((compteur < nbDossiers) && (Dossier[compteur].nom != d.nom)) 
+		
+		
+		
+		while ((compteur < this.nbDossiers) && (d.getNom().equals(this.dossiers[compteur].getNom())))
 		{
 			compteur++;
 		}
@@ -75,4 +93,6 @@ public class CompteMail
 		
 		
 	}
+
+
 }

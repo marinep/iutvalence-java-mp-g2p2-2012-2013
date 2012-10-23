@@ -7,9 +7,41 @@ package fr.iutvalence.java.projet2;
  */
 public class RecepteurDeMessages {
 	
-	public void RecepteurDeMessage(Message m)
+	/**
+	 * Référence pour identifier le récepteur
+	 */
+	private String ref;
+	
+	
+
+	/**
+	 * getter pour utiliser la référence en dehors de la classe
+	 * @return la référence du récepteur
+	 */
+	public String getRef() {
+		return this.ref;
+	}
+
+	/**
+	 * setter pour utiliser la référence en dehors de la classe
+	 * @param ref la référence du récepteur
+	 */
+	public void setRef(String ref) {
+		this.ref = ref;
+	}
+
+	/**
+	 * un message constant permettant de tester une réception de message contenant expéditeur, destinataire, objet et corps
+	 */
+	private final static Message MESSAGE_NAIF = new Message("moi", "toi", "test", "ceci est un test de réception");
+	
+	/**
+	 * Permet de tester la réception d'un message
+	 * @return un message naif
+	 */
+	public Message recevoirMessage()
 	{
-		System.out.println(" du message : "+m);
+		return MESSAGE_NAIF;
 	}
 	
 	/*

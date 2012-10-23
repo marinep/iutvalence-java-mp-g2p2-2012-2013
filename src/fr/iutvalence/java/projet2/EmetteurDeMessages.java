@@ -6,10 +6,37 @@ package fr.iutvalence.java.projet2;
  */
 public class EmetteurDeMessages 
 {	
-	
 	/**
-	 * Cette fonction est du flan 
+	 * Référence pour identifier l'emetteur
+	 */
+	private String ref;
+	
+	/** 
+	 * getter pour utiliser la référence en dehors de la classe
+	 * @return la référence de l'émetteur
+	 */
+	public String getRef() {
+		return this.ref;
+	}
+
+	/**
+	 * setter pour utiliser la référence en dehors de la classe
+	 * @param ref la référence de l'émetteur
+	 */
+	public void setRef(String ref) 
+	{
+		this.ref = ref;
+	}
+	
+	public EmetteurDeMessages(String s)
+	{
+		this.ref = s;
+	}
+
+	/**
+	 * Cette fonction est du flan<br/> 
 	 * Envoi de message 
+	 * @param m le message à envoyer
 	 */
 	public void envoiMessage(Message m)
 	{

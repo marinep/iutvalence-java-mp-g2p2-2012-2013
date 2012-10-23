@@ -33,7 +33,7 @@ public class BoiteAuxLettres {
 	// FIxME il manque un attribut pour savoir combien il y a d'éléments dans le tableau
 	
 	// FIxME constructeurs, méthodes ?
-	
+
 	public BoiteAuxLettres()
 	{
 		// FIxME définir la capacité par défaut du tableau sous forme d'une constante

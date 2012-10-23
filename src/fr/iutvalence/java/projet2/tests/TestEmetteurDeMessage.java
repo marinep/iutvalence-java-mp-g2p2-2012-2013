@@ -13,6 +13,7 @@ public class TestEmetteurDeMessage {
 	/**
 	 * Fonction de test qui affiche dans la console un message.
 	 * Cela permet de tester si le message a été créé correctement.
+	 * @param args 
 	 */
 	public static void main(String[] args) 
 	{

@@ -1,7 +1,8 @@
 package fr.iutvalence.java.projet2;
 
 /** 
- * Classe générale permettant de gérer sa boite mail (réception, envoi, affichage...)
+ * Cette classe représente la classe générale de l'application.
+ * Elle permet de gérer sa boite mail (réception, envoi, affichage...)
  * */
 public class ClientMail 
 {
