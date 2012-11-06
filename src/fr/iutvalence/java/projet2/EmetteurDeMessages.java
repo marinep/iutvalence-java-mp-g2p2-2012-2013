@@ -28,6 +28,10 @@ public class EmetteurDeMessages
 		this.ref = ref;
 	}
 	
+	/**
+	 * 
+	 * @param s
+	 */
 	public EmetteurDeMessages(String s)
 	{
 		this.ref = s;

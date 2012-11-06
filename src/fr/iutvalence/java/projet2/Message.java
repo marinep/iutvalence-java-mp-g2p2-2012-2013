@@ -90,11 +90,8 @@ public class Message {
 				+ ", destinataire=" + this.destinataire + ", corps=" + this.corps + "]";
 	}
 	
-	//FIXME(FIXED) redéfinir equals et hashCode
-
 	
 	/** 
-	 * 
 	 * @see java.lang.Object#hashCode()
 	 */
 	@Override
@@ -111,7 +108,7 @@ public class Message {
 	}
 
 	/**
-	 * Deux objets sont considérés comme égaux s'ils ont le même objet,
+	 * Deux messages sont considérés comme égaux s'ils ont le même objet,
 	 * le même expéditeur, le même destinataire et le même corps
 	 * 
 	 * NB : nous sommes pour l'heure obligés de comparer les corps des

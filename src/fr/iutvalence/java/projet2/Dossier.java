@@ -1,5 +1,7 @@
 package fr.iutvalence.java.projet2;
 
+import java.util.Arrays;
+
 /**
  * La classe Dossier est utilisée pour représenter un ensemble de messages, 
  * regroupés de manière délibérée par l'utilisateur, ou regroupés dans certains cas
@@ -41,14 +43,21 @@ public class Dossier {
 	/**
 	 * Capacité maximum du dossier de messages
 	 */
-	public final static int CAPA_MAX = 200;
+	public final static int CAPA_MAX = 5;
 	
 	/**
 	 * Nombre d'éléments du tableau de messages correspondant au nombre de messages
 	 */
 	private int nbMessages;
 	
-	// FIXME(FIXED) compléter le commentaire
+	
+	
+	@Override
+	public String toString() {
+		return "Le dossier " + this.nom + " contient ces messages : \n" + Arrays.toString(this.msgs)
+				+ "\nIl contient " + this.nbMessages + " messages.";
+	}
+
 	/**
 	 * Constructeur pour la création d'un nouveau Dossier vide, 
 	 * avec en paramètre son nom
@@ -57,36 +66,58 @@ public class Dossier {
 	public Dossier(String nom) {
 		
 		this.nom = nom;
-		this.msgs = new Message[0]; 
+		this.msgs = new Message[CAPA_MAX]; 
 		
 	}
 	
-	// FIXME(FIXED) compléter le commentaire
 	/**
 	 * Fonction permettant d'ajouter un message dans le dossier.
 	 * @param m message à ajouter dans le dossier
-	 * @throws DossierPleinException 
+	 * @throws DossierPleinException si le dossier est déjà plein
 	 */
 	public void ajouterMessage(Message m) throws DossierPleinException{
 		
-		if(this.nbMessages > CAPA_MAX){
+		if(this.nbMessages == CAPA_MAX)
+		{
 			throw new DossierPleinException();
 		}
-			
-		this.nbMessages++;
 		this.msgs[this.nbMessages] = m;
+		this.nbMessages++;
+		
+		System.out.println("Message ajouté : "+m);
 		
 	}
 	
-	// FIXME(FIXED) compléter le commentaire
 	/**
 	 * Fonction permettant de supprimer un message dans le dossier.
 	 * @param m message à supprimer du dossier
+	 * @return <tt>true</tt> si le message a été supprimé, <tt>false</tt> sinon
+	 * @throws DossierVideException 
 	 */
-	public void supprimerMessage(Message m){		
+	public boolean supprimerMessage(Message m) throws DossierVideException {	
+		
+
+		boolean trouve = false;
+		if(this.nbMessages == 0)
+		{
+			throw new DossierVideException();
+		}
+		else 
+		{
+		  for (int i=0; i<this.nbMessages; i++)
+		  {
+		  	if ((!trouve) && (m.equals(this.msgs[i])))
+		  		trouve = true;
+		  	if ((trouve)&&(i<this.nbMessages))
+		  		this.msgs[i] = this.msgs[i+1];
+		  }
+		  if (trouve) 
+		  	this.nbMessages--;
+		}
+		return trouve;
+		
+	/*public boolean supprimerMessage(Message m){		
 			
-		// FIXME(FIXED) à compléter 
-		// FIXME(FIXED) pour que cela marche, il faudrait redéfinir equals dans Message
 		int i = 0;
 		int j;
 		while(i < this.nbMessages && m.equals(this.msgs[i]))
@@ -99,9 +130,9 @@ public class Dossier {
 		}
 		
 		this.nbMessages--;
-		
-		
-		
+		return true;
+		*/
+			
 	}
 	
 	

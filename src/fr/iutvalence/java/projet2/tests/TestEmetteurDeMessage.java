@@ -17,7 +17,7 @@ public class TestEmetteurDeMessage {
 	 */
 	public static void main(String[] args) 
 	{
-		EmetteurDeMessages emetteur = new EmetteurDeMessages();
+		EmetteurDeMessages emetteur = new EmetteurDeMessages("test");
 		Message m = new Message("test", "moi", "lui", "test...");
 		emetteur.envoiMessage(m);
 	}
