@@ -57,7 +57,6 @@ public class Message {
 		return this.objet;
 	}
 
-
 	/**
 	 * Obtenir l'éxpéditeur du mail
 	 * @return l'expéditeur du mail
@@ -149,9 +148,5 @@ public class Message {
 		return true;
 	}
 	
-	
-
-	
-
 	
 }

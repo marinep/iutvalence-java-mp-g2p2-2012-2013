@@ -12,7 +12,11 @@ public class RecepteurDeMessages {
 	 */
 	private String ref;
 	
-	
+	public RecepteurDeMessages(String s)
+	{
+		this.ref = s;
+		
+	}
 
 	/**
 	 * getter pour utiliser la référence en dehors de la classe
@@ -29,6 +33,13 @@ public class RecepteurDeMessages {
 	public void setRef(String ref) {
 		this.ref = ref;
 	}
+
+	
+	@Override
+	public String toString() {
+		return "RecepteurDeMessages [ref=" + ref + "]";
+	}
+
 
 	/**
 	 * un message constant permettant de tester une réception de message contenant expéditeur, destinataire, objet et corps

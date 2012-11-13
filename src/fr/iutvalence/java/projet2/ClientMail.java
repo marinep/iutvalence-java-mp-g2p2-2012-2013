@@ -16,6 +16,15 @@ public class ClientMail
 	 */
 	private int nbComptesMail;
 	
+	
+	/**
+	 * @return
+	 */
+	public String[] getNomComptes(){
+		String[] res = new String[this.nbComptesMail];
+		for(int i = 0; i < this.nbComptesMail; i++){
+			res = res + getNomCompte[i].nomCompte;
+		}
+	}
 
-	// FIXME constructeurs, méthodes ?
 }

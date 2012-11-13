@@ -37,6 +37,12 @@ public class EmetteurDeMessages
 		this.ref = s;
 	}
 
+	
+	@Override
+	public String toString() {
+		return "EmetteurDeMessages [ref=" + ref + "]";
+	}
+
 	/**
 	 * Cette fonction est du flan<br/> 
 	 * Envoi de message 
