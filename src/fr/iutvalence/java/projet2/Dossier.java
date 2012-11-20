@@ -67,8 +67,8 @@ public class Dossier {
 	 * @param nom
 	 *            Nom du dossier contenant les messages
 	 */
-	
-	//TODO vérifier
+
+	// TODO vérifier
 	public Dossier(String nom) {
 
 		this.nom = nom;
@@ -110,7 +110,7 @@ public class Dossier {
 		if (this.nbMessages == 0) {
 			throw new DossierVideException();
 		}
-		
+
 		boolean trouve = false;
 
 		for (int i = 0; i < this.nbMessages; i++) {
