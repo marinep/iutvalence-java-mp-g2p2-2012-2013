@@ -24,7 +24,10 @@ public class TestOperationsDossierMessages {
 		Message m2 = new Message("bli", "bla", "bla", "blablabla...");
 		Message m3 = new Message("sdfsd", "sdfsdf", "sdfsdf", "tesqsdqst...");
 		Message m4 = new Message("sdqsdqsdfsd", "sdfsdgf", "db", "cbb...");
+		Message m5 = new Message("bli", "blob", "beffla", "bleeeeablabla...");
 
+
+		
 		try {
 			dossTest.ajouterMessage(m1);
 		} catch (DossierPleinException e) {
@@ -55,6 +58,7 @@ public class TestOperationsDossierMessages {
 		}
 
 		System.out.println(dossTest);
+		dossTest.rechercherMessage("bli");
 
 	}
 

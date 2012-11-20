@@ -1,6 +1,6 @@
 package fr.iutvalence.java.projet2;
 
-import java.util.Arrays;
+import java.util.*;
 
 /**
  * La classe Dossier est utilisée pour représenter un ensemble de messages,
@@ -11,41 +11,26 @@ import java.util.Arrays;
  * @author pougem
  * 
  */
-public class Dossier {
-
+public class Dossier implements DossierManager {
+	
+	/**
+	 * Capacité maximum du dossier de messages
+	 */
+	public final static int CAPA_MAX = 5;
+	
 	/**
 	 * Nom du Dossier de messages
 	 */
 	private String nom;
 
-	/**
-	 * getter pour utiliser le nom du dossier en dehors de la classe
-	 * 
-	 * @return le nom du dossier
-	 */
-	public String getNom() {
-		return this.nom;
-	}
-
-	/**
-	 * setter pour utiliser le nom du dossier en dehors de la classe
-	 * 
-	 * @param nom
-	 *            le nom du dossier
-	 */
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
+	
 
 	/**
 	 * Les messages présents dans le Dossier
 	 */
 	private Message[] msgs;
 
-	/**
-	 * Capacité maximum du dossier de messages
-	 */
-	public final static int CAPA_MAX = 5;
+
 
 	/**
 	 * Nombre d'éléments du tableau de messages correspondant au nombre de
@@ -53,12 +38,7 @@ public class Dossier {
 	 */
 	private int nbMessages;
 
-	@Override
-	public String toString() {
-		return "Le dossier " + this.nom + " contient ces messages : \n"
-				+ Arrays.toString(this.msgs) + "\nIl contient "
-				+ this.nbMessages + " messages.";
-	}
+	
 
 	/**
 	 * Constructeur pour la création d'un nouveau Dossier vide, avec en
@@ -134,6 +114,47 @@ public class Dossier {
 		 * this.nbMessages--; return true;
 		 */
 
+	}
+	
+	/**
+	 * @param s
+	 * @return
+	 */
+/*	public Message[] rechercherMessage(String s){
+
+		//String[] res = new String[this.nbMessages];
+		String res = new String();
+		for (int i = 0; i < this.nbMessages; i++)
+		{
+			String obj = this.msgs[i].getObjet();
+			if(s.equals(obj))
+			{
+				res = res + obj;
+			}
+		}
+		System.out.println(res);
+		return res;
+	}
+*/
+	public List<Message> rechercherMessage(String keyword)
+	{
+		List<Message> collec = new ArrayList<Message>(); 
+		
+		for(Message m : msgs)
+		{		
+			if (m.getObjet().toLowerCase().contains(keyword.toLowerCase()))
+			{
+			collec.add(m);
+				
+			}
+			return collec;
+		}
+	}
+	@Override
+	public String toString() {
+		return "Le dossier " + this.nom + " contient ces messages : \n"
+				+ Arrays.toString(this.msgs) + "\nIl contient "
+				+ this.nbMessages + " messages.";
 	}
 
 }

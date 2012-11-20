@@ -43,8 +43,9 @@ public class CompteMail {
 	 */
 	private int nbDossiers;
 
-	// FIXME compléter le commentaire (manque la ligne de résumé)
+	// FIXME FIXED
 	/**
+	 * Créer un nouveau compte mail avec en paramètre un nom de compte, une adresse, un émetteur et un récepteur.
 	 * @param nomCompte
 	 * @param adresseCompte
 	 * @param emetteurCompte
@@ -78,49 +79,55 @@ public class CompteMail {
 		return this.adresseCompte;
 	}
 
-	// FIXME compléter le commentaire (manque la ligne de résumé)
+	// FIXME FIXED
 	/**
 	 * @return l'emetteur du compte mail
+	 * Accesseur en lecture d'emetteurCompte
 	 */
 	public EmetteurDeMessages getEmetteurCompte() {
 		return this.emetteurCompte;
 	}
 
-	// FIXME compléter le commentaire (manque la ligne de résumé)
+	// FIXME FIXED
 	/**
 	 * @return le récepteur du compte mail
+	 * Accesseur en lecture de recepteurCompte
 	 */
 	public RecepteurDeMessages getRecepteurCompte() {
 		return this.recepteurCompte;
 	}
 
-	// FIXME compléter le commentaire (manque la ligne de résumé)
+	// FIXME FIXED
 	/**
 	 * @param nomCompte
+	 * Accesseur en écriture de monCompte
 	 */
 	public void setNomCompte(String nomCompte) {
 		this.nomCompte = nomCompte;
 	}
 
-	// FIXME compléter le commentaire (manque la ligne de résumé)
+	// FIXME FIXED
 	/**
 	 * @param adresseCompte
+	 * Accesseur en écriture de adresseCompte
 	 */
 	public void setAdresseCompte(String adresseCompte) {
 		this.adresseCompte = adresseCompte;
 	}
 
-	// FIXME compléter le commentaire (manque la ligne de résumé)
+	// FIXME FIXED
 	/**
 	 * @param emetteurCompte
+	 * Accesseur en écriture de emmeteurCompte
 	 */
 	public void setEmetteurCompte(EmetteurDeMessages emetteurCompte) {
 		this.emetteurCompte = emetteurCompte;
 	}
 
-	// FIXME compléter le commentaire (manque la ligne de résumé)
+	// FIXME FIXED
 	/**
 	 * @param recepteurCompte
+	 * Accesseur en écriture de recepteurCompte
 	 */
 	public void setRecepteurCompte(RecepteurDeMessages recepteurCompte) {
 		this.recepteurCompte = recepteurCompte;
@@ -176,6 +183,7 @@ public class CompteMail {
 	 *             Exception renvoyée si le nom du dossier n'existe pas
 	 */
 	/*
+	 * 
 	 * public boolean supprimerDossier(Dossier d) throws
 	 * NomDossierInvalideException, CompteMailInvalideException{
 	 * 

@@ -1,6 +1,10 @@
 package fr.iutvalence.java.projet2;
 
-//FIXME commentaire
+//FIXME FIXED
+/**
+ * @author pougem
+ * exception générée en cas d'élémént plein
+ */
 public class CapaMaxException extends Exception {
 
 }
