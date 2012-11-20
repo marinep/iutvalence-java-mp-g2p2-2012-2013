@@ -20,11 +20,13 @@ public class ClientMail
 	/**
 	 * @return
 	 */
+	//TODO
 	public String[] getNomComptes(){
 		String[] res = new String[this.nbComptesMail];
 		for(int i = 0; i < this.nbComptesMail; i++){
-			res = res + getNomCompte[i].nomCompte;
+			res = res + ;
 		}
+		return res;
 	}
 
 }
