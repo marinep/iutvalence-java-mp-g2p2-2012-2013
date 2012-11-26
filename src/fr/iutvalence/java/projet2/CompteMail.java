@@ -43,7 +43,7 @@ public class CompteMail {
 	 */
 	private int nbDossiers;
 
-	// FIXME FIXED
+	// FIXME il faut commenter les @param (même si c'est redondant)
 	/**
 	 * Créer un nouveau compte mail avec en paramètre un nom de compte, une adresse, un émetteur et un récepteur.
 	 * @param nomCompte
@@ -79,25 +79,25 @@ public class CompteMail {
 		return this.adresseCompte;
 	}
 
-	// FIXME FIXED
 	/**
-	 * @return l'emetteur du compte mail
 	 * Accesseur en lecture d'emetteurCompte
+	 * @return l'emetteur du compte mail
+	 * 
 	 */
 	public EmetteurDeMessages getEmetteurCompte() {
 		return this.emetteurCompte;
 	}
 
-	// FIXME FIXED
 	/**
-	 * @return le récepteur du compte mail
 	 * Accesseur en lecture de recepteurCompte
+	 * @return le récepteur du compte mail
+	 * 
 	 */
 	public RecepteurDeMessages getRecepteurCompte() {
 		return this.recepteurCompte;
 	}
 
-	// FIXME FIXED
+	// FIXME il faut commenter les @param (même si c'est redondant)
 	/**
 	 * @param nomCompte
 	 * Accesseur en écriture de monCompte
@@ -106,28 +106,31 @@ public class CompteMail {
 		this.nomCompte = nomCompte;
 	}
 
-	// FIXME FIXED
+	// FIXME il faut commenter les @param (même si c'est redondant)
 	/**
-	 * @param adresseCompte
 	 * Accesseur en écriture de adresseCompte
+	 * @param adresseCompte
+	 * 
 	 */
 	public void setAdresseCompte(String adresseCompte) {
 		this.adresseCompte = adresseCompte;
 	}
 
-	// FIXME FIXED
+	// FIXME il faut commenter les @param (même si c'est redondant)
 	/**
-	 * @param emetteurCompte
 	 * Accesseur en écriture de emmeteurCompte
+	 * @param emetteurCompte
+	 * 
 	 */
 	public void setEmetteurCompte(EmetteurDeMessages emetteurCompte) {
 		this.emetteurCompte = emetteurCompte;
 	}
 
-	// FIXME FIXED
+	// FIXME il faut commenter les @param (même si c'est redondant)
 	/**
-	 * @param recepteurCompte
 	 * Accesseur en écriture de recepteurCompte
+	 * @param recepteurCompte
+	 * 
 	 */
 	public void setRecepteurCompte(RecepteurDeMessages recepteurCompte) {
 		this.recepteurCompte = recepteurCompte;
