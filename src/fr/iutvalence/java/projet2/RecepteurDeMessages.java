@@ -11,6 +11,9 @@ public class RecepteurDeMessages {
 	 */
 	private String ref;
 
+	/**
+	 * @param s 
+	 */
 	public RecepteurDeMessages(String s) {
 		this.ref = s;
 
@@ -37,7 +40,7 @@ public class RecepteurDeMessages {
 
 	@Override
 	public String toString() {
-		return "RecepteurDeMessages [ref=" + ref + "]";
+		return "RecepteurDeMessages [ref=" + this.ref + "]";
 	}
 
 	/**

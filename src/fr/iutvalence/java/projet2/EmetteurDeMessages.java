@@ -39,7 +39,7 @@ public class EmetteurDeMessages {
 
 	@Override
 	public String toString() {
-		return "EmetteurDeMessages [ref=" + ref + "]";
+		return "EmetteurDeMessages [ref=" + this.ref + "]";
 	}
 
 	/**

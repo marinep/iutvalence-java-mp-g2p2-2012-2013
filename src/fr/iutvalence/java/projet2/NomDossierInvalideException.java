@@ -8,4 +8,9 @@ package fr.iutvalence.java.projet2;
  */
 public class NomDossierInvalideException extends Exception {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 }

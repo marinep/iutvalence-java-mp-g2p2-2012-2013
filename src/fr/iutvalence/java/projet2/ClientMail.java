@@ -21,14 +21,13 @@ public class ClientMail {
 	// FIXME méthodes ajout/suppression de comptes ?
 
 	/**
-	 * @return
+	 * @return le nom des comptes mail
 	 */
-
 	public String[] getNomComptes() {
 		String[] res = new String[this.nbComptesMail];
 
 		for (int i = 0; i < this.nbComptesMail; i++) {
-			res = res + getNomComptes[i].nomCompte;
+			res[i] = res + this.comptesMail[i].getNomCompte();
 		}
 		return res;
 	}

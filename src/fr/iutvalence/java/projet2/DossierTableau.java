@@ -11,26 +11,17 @@ import java.util.*;
  * @author pougem
  * 
  */
-public class Dossier implements DossierManager {
+public class DossierTableau extends DossierAbstraite {
 	
 	/**
 	 * Capacité maximum du dossier de messages
 	 */
 	public final static int CAPA_MAX = 5;
-	
-	/**
-	 * Nom du Dossier de messages
-	 */
-	private String nom;
-
-	
 
 	/**
 	 * Les messages présents dans le Dossier
 	 */
 	private Message[] msgs;
-
-
 
 	/**
 	 * Nombre d'éléments du tableau de messages correspondant au nombre de
@@ -38,20 +29,16 @@ public class Dossier implements DossierManager {
 	 */
 	private int nbMessages;
 
-	
-
 	/**
 	 * Constructeur pour la création d'un nouveau Dossier vide, avec en
 	 * paramètre son nom
 	 * 
-	 * @param nom
-	 *            Nom du dossier contenant les messages
+	 * @param nom Nom du dossier contenant les messages
 	 */
 
 	// TODO vérifier
-	public Dossier(String nom) {
-
-		this.nom = nom;
+	public DossierTableau(String nom) {
+		super(nom);
 		this.msgs = new Message[CAPA_MAX];
 
 	}
@@ -59,10 +46,8 @@ public class Dossier implements DossierManager {
 	/**
 	 * Fonction permettant d'ajouter un message dans le dossier.
 	 * 
-	 * @param m
-	 *            message à ajouter dans le dossier
-	 * @throws DossierPleinException
-	 *             si le dossier est déjà plein
+	 * @param m message à ajouter dans le dossier
+	 * @throws DossierPleinException si le dossier est déjà plein
 	 */
 	public void ajouterMessage(Message m) throws DossierPleinException {
 
@@ -80,8 +65,7 @@ public class Dossier implements DossierManager {
 	/**
 	 * Fonction permettant de supprimer un message dans le dossier.
 	 * 
-	 * @param m
-	 *            message à supprimer du dossier
+	 * @param m message à supprimer du dossier
 	 * @return <tt>true</tt> si le message a été supprimé, <tt>false</tt> sinon
 	 * @throws DossierVideException
 	 */
@@ -118,43 +102,98 @@ public class Dossier implements DossierManager {
 	
 	/**
 	 * @param s
-	 * @return
+	 * @return Permet de rechercher un message
 	 */
-/*	public Message[] rechercherMessage(String s){
-
-		//String[] res = new String[this.nbMessages];
-		String res = new String();
-		for (int i = 0; i < this.nbMessages; i++)
-		{
-			String obj = this.msgs[i].getObjet();
-			if(s.equals(obj))
+	/*	public Message[] rechercherMessage(String s){
+	
+			//String[] res = new String[this.nbMessages];
+			String res = new String();
+			for (int i = 0; i < this.nbMessages; i++)
 			{
-				res = res + obj;
+				String obj = this.msgs[i].getObjet();
+				if(s.equals(obj))
+				{
+					res = res + obj;
+				}
 			}
+			System.out.println(res);
+			return res;
 		}
-		System.out.println(res);
-		return res;
-	}
-*/
-	public List<Message> rechercherMessage(String keyword)
+	*/
+	
+	public List<Message> rechercherMessageObjet(String keyword)
 	{
 		List<Message> collec = new ArrayList<Message>(); 
-		
-		for(Message m : msgs)
-		{		
-			if (m.getObjet().toLowerCase().contains(keyword.toLowerCase()))
+                
+		for(int i = 0; i < this.nbMessages; i++)
+        {
+			if (this.msgs[i].getObjet().toLowerCase().contains(keyword.toLowerCase()))
 			{
-			collec.add(m);
+                            
+				collec.add(this.msgs[i]);
 				
 			}
-			return collec;
 		}
+        return collec;
 	}
+	
+
+
+    @Override
+    public List<Message> rechercherMessageExp(String keyword)
+    {
+        List<Message> collec = new ArrayList<Message>(); 
+                
+		for(int i = 0; i < this.nbMessages; i++)
+        {
+			if (this.msgs[i].getExpediteur().toLowerCase().contains(keyword.toLowerCase()))
+			{
+                            
+				collec.add(this.msgs[i]);
+				
+			}
+		}
+        return collec;
+    }
+
+    @Override
+    public List<Message> rechercherMessageDest(String keyword)
+    {
+        List<Message> collec = new ArrayList<Message>(); 
+                
+		for(int i = 0; i < this.nbMessages; i++)
+        {
+			if (this.msgs[i].getDestinataire().toLowerCase().contains(keyword.toLowerCase()))
+			{
+                            
+				collec.add(this.msgs[i]);
+				
+			}
+		}
+		return collec;
+    }
+
+    @Override
+    public List<Message> rechercherMessageCorps(String keyword)
+    {
+    	List<Message> collec = new ArrayList<Message>(); 
+
+    	for(int i = 0; i < this.nbMessages; i++)
+    	{
+    		if (this.msgs[i].getCorps().toLowerCase().contains(keyword.toLowerCase()))
+    		{
+
+    			collec.add(this.msgs[i]);
+
+    		}
+    	}
+    	return collec;
+    }
+
 	@Override
 	public String toString() {
-		return "Le dossier " + this.nom + " contient ces messages : \n"
+		return "Le dossier " + this.getNom() + " contient ces messages : \n"
 				+ Arrays.toString(this.msgs) + "\nIl contient "
 				+ this.nbMessages + " messages.";
 	}
-
 }
