@@ -42,8 +42,6 @@ public class CompteMail {
 	 * entier permettant de determiner le nombre de dossiers pour ce compte mail
 	 */
 	private int nbDossiers;
-
-	// FIXME (FIXED) il faut commenter les @param (même si c'est redondant)
 	/**
 	 * Créer un nouveau compte mail avec en paramètre un nom de compte, une adresse, un émetteur et un récepteur.
 	 * @param nomCompte le nom du compte mail
@@ -97,7 +95,6 @@ public class CompteMail {
 		return this.recepteurCompte;
 	}
 
-	// FIXME (FIXED) il faut commenter les @param (même si c'est redondant)
 	/**
 	 * @param nomCompte le nom du compte mail
 	 * Accesseur en écriture de monCompte
@@ -106,7 +103,6 @@ public class CompteMail {
 		this.nomCompte = nomCompte;
 	}
 
-	// FIXME (FIXED) il faut commenter les @param (même si c'est redondant)
 	/**
 	 * Accesseur en écriture de adresseCompte
 	 * @param adresseCompte l'adresse du compte mail
@@ -116,7 +112,6 @@ public class CompteMail {
 		this.adresseCompte = adresseCompte;
 	}
 
-	// FIXME (FIXED) il faut commenter les @param (même si c'est redondant)
 	/**
 	 * Accesseur en écriture de emmeteurCompte
 	 * @param emetteurCompte l'emmeteur du compte mail
@@ -126,7 +121,6 @@ public class CompteMail {
 		this.emetteurCompte = emetteurCompte;
 	}
 
-	// FIXME (FIXED) il faut commenter les @param (même si c'est redondant)
 	/**
 	 * Accesseur en écriture de recepteurCompte
 	 * @param recepteurCompte le recepteur du compte mail 
