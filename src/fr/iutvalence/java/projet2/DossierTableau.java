@@ -47,12 +47,12 @@ public class DossierTableau extends DossierAbstraite {
 	 * Fonction permettant d'ajouter un message dans le dossier.
 	 * 
 	 * @param m message à ajouter dans le dossier
-	 * @throws DossierPleinException si le dossier est déjà plein
+	 * @throws StorageException si le dossier est déjà plein
 	 */
-	public void ajouterMessage(Message m) throws DossierPleinException {
+	public void ajouterMessage(Message m) throws StorageException {
 
 		if (this.nbMessages == CAPA_MAX) {
-			throw new DossierPleinException();
+			throw new StorageException();
 		}
 		this.msgs[this.nbMessages] = m;
 		this.nbMessages++;

@@ -1,5 +1,6 @@
 package fr.iutvalence.java.projet2;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -16,10 +17,10 @@ public interface DossierManager {
 	
 	/**
 	 * @param m le message à ajouter
-	 * @throws DossierPleinException
+	 * @throws StorageException
 	 * permet l'ajout d'un message dans un dossier
 	 */
-	public void ajouterMessage(Message m) throws DossierPleinException;
+	public void ajouterMessage(Message m) throws StorageException;
 	
 	/**
 	 * @param m le message à supprimer

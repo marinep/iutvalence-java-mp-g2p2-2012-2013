@@ -2,10 +2,12 @@ package fr.iutvalence.java.projet2.tests;
 
 import fr.iutvalence.java.projet2.DossierCollection;
 import fr.iutvalence.java.projet2.DossierManager;
-import fr.iutvalence.java.projet2.DossierPleinException;
+import fr.iutvalence.java.projet2.StorageException;
 import fr.iutvalence.java.projet2.DossierTableau;
 import fr.iutvalence.java.projet2.DossierVideException;
 import fr.iutvalence.java.projet2.Message;
+
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 
@@ -21,9 +23,10 @@ public class TestOperationsDossierMessages
      * est plein (exception DossierPleinException), on renvoie une erreur
      *
      * @param args
-     * @throws DossierPleinException
+     * @throws IOException 
+     * @throws StorageException
      */
-    public static void main(String[] args)
+    public static void main(String[] args) throws IOException
     {
         DossierManager dossTest = new DossierTableau("mesTps");
         Message m1 = new Message("test", "moi", "lui", "test...");
@@ -38,7 +41,7 @@ public class TestOperationsDossierMessages
         {
             dossTest.ajouterMessage(m1);
         }
-        catch (DossierPleinException e)
+        catch (StorageException e)
         {
             System.out.println("Le message n'a pas pu être ajouté.\n");
         }
@@ -46,7 +49,7 @@ public class TestOperationsDossierMessages
         {
             dossTest.ajouterMessage(m2);
         }
-        catch (DossierPleinException e)
+        catch (StorageException e)
         {
             System.out.println("Le message n'a pas pu être ajouté.\n");
         }
@@ -54,7 +57,7 @@ public class TestOperationsDossierMessages
         {
             dossTest.ajouterMessage(m3);
         }
-        catch (DossierPleinException e)
+        catch (StorageException e)
         {
             System.out.println("Le message n'a pas pu être ajouté.\n");
         }
@@ -62,7 +65,7 @@ public class TestOperationsDossierMessages
         {
             dossTest.ajouterMessage(m4);
         }
-        catch (DossierPleinException e)
+        catch (StorageException e)
         {
             System.out.println("Le message n'a pas pu être ajouté.\n");
         }
@@ -84,7 +87,7 @@ public class TestOperationsDossierMessages
         {
             dossTest.ajouterMessage(m5);
         }
-        catch (DossierPleinException e)
+        catch (StorageException e)
         {
             System.out.println("Le message n'a pas pu être ajouté.\n");
         }
@@ -121,7 +124,7 @@ public class TestOperationsDossierMessages
         {
             dossTest2.ajouterMessage(m1);
         }
-        catch (DossierPleinException e)
+        catch (StorageException e)
         {
             System.out.println("Le message n'a pas pu être ajouté.\n");
         }
@@ -129,7 +132,7 @@ public class TestOperationsDossierMessages
         {
             dossTest2.ajouterMessage(m2);
         }
-        catch (DossierPleinException e)
+        catch (StorageException e)
         {
             System.out.println("Le message n'a pas pu être ajouté.\n");
         }
@@ -137,7 +140,7 @@ public class TestOperationsDossierMessages
         {
             dossTest2.ajouterMessage(m3);
         }
-        catch (DossierPleinException e)
+        catch (StorageException e)
         {
             System.out.println("Le message n'a pas pu être ajouté.\n");
         }
@@ -145,7 +148,7 @@ public class TestOperationsDossierMessages
         {
             dossTest2.ajouterMessage(m4);
         }
-        catch (DossierPleinException e)
+        catch (StorageException e)
         {
             System.out.println("Le message n'a pas pu être ajouté.\n");
         }
@@ -167,7 +170,7 @@ public class TestOperationsDossierMessages
         {
             dossTest2.ajouterMessage(m5);
         }
-        catch (DossierPleinException e)
+        catch (StorageException e)
         {
             System.out.println("Le message n'a pas pu être ajouté.\n");
         }
